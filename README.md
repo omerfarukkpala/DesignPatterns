@@ -9,7 +9,7 @@ Chain of Responsibility deseni, isteklerin hiyerarşik bir şekilde işlenmesini
 Chain of Responsibility deseni, bir isteğin sıralı olarak işlenmesi gereken senaryolar için idealdir. Bu deseni aşağıdaki gibi durumlarda kullanabilirsiniz:
 - **Kredi Onay Süreci**: Veznedar, şube müdürü, bölge müdürü gibi yetkililerin sırasıyla kredi talebini onaylaması.
 ## Örnek Proje: Kredi Onay Süreci
-
+ 
 Bir bankanın kredi onay sürecini simüle eden örnek senaryoda, müşterinin talep ettiği kredi tutarına göre işlem yetkisi olan kişilere sırasıyla başvurulur:
 
 1. **Müşteri** 250.000 TL kredi talep eder.
