@@ -15,7 +15,7 @@ Chain of Responsibility deseni, bir isteğin sıralı olarak işlenmesi gereken 
  
 Bir bankanın kredi onay sürecini simüle eden örnek senaryoda, müşterinin talep ettiği kredi tutarına göre işlem yetkisi olan kişilere sırasıyla başvurulur:
 
-1. **Müşteri** 250.000 TL kredi talep eder.
+1. **Müşteri** 1.250.000 TL kredi talep eder.
 2. **Veznedar**, limiti 50.000 TL olduğu için bu talebi işleyemez ve bir üst seviyeye, **şube müdür yardımcısına** iletir.
 3. **Şube müdür yardımcısı** 150.000 TL limiti aşan talebi işleyemez, bu nedenle talebi **şube müdürüne** iletir.
 4. **Şube müdürü**, limiti 19050.000 TL'yi aştığı için işleyemez ve talebi **bölge müdürüne** yönlendirir.
