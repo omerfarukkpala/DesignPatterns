@@ -300,7 +300,55 @@ Tekil nesneler ve kompozit yapılar aynı arayüz aracılığıyla yönetildiği
 **Composite Design Pattern**, hiyerarşik yapıları ve nesneler arası bağımlılıkları yönetmek isteyen yazılımlar için oldukça yararlı ve esnek bir çözümdür.
 
 
+# 8 - Mediator Design Pattern
 
+**Mediator Design Pattern**, bir sistemdeki nesneler arasındaki iletişimi merkezi bir noktada toplamak ve düzenlemek amacıyla kullanılan bir davranışsal tasarım desenidir. Bu desen, nesnelerin birbirleriyle doğrudan etkileşime girmesini engelleyerek, iletişimi bir aracı (mediator) nesne üzerinden yönetir. Böylece, nesneler arasındaki sıkı bağımlılıklar azaltılır, daha modüler ve esnek bir yapı elde edilir.
+
+## Mediator Tasarım Deseni'nin Amacı ve Avantajları
+
+### 1. Merkezi İletişim Sağlama
+Mediator deseni, birden çok nesnenin birbirleriyle doğrudan iletişime geçmesi yerine, merkezi bir bileşen üzerinden iletişim kurmalarını sağlar. Bu sayede, karmaşık nesne ilişkileri daha basit hale gelir.
+
+### 2. Gevşek Bağlantıyı Teşvik Etme
+Nesneler birbirleriyle doğrudan etkileşime girmez; bunun yerine, tüm etkileşimleri bir **mediator** üzerinden gerçekleşir. Bu yapı, nesneler arası bağımlılıkları azaltır ve daha modüler bir mimari sağlar.
+
+### 3. Bakımı ve Genişletilebilirliği Kolaylaştırma
+Nesneler mediator aracılığıyla iletişim kurduğu için, bir nesnenin davranışında yapılacak değişiklikler diğer nesneleri etkilemez. Bu durum, kodun bakımını kolaylaştırır ve gerektiğinde yeni işlevselliklerin eklenmesini sağlar.
+
+## Mediator Tasarım Deseni’nin Bileşenleri
+
+1. **Mediator (Aracı)**: Tüm nesneler arasındaki iletişimi yöneten merkezi bir bileşendir. Diğer nesnelerin taleplerini alır ve ilgili nesnelere iletir.
+
+2. **Concrete Mediator (Somut Aracı)**: `Mediator` arayüzünü uygulayan, nesneler arasındaki iletişimi gerçekleştiren somut sınıftır. Talepleri alır, ilgili işlemleri yapar ve gerektiğinde diğer nesnelere iletir.
+
+3. **Colleague (İş Arkadaşı)**: Mediator ile iletişime geçen nesnelerin arayüzüdür. Bu nesneler, birbirleriyle doğrudan iletişim kurmak yerine mediator üzerinden haberleşir.
+
+4. **Concrete Colleague (Somut İş Arkadaşı)**: `Colleague` arayüzünü uygulayan nesnelerdir. Bu nesneler kendi işlevlerini gerçekleştirirken mediator aracılığıyla diğer nesnelerle iletişim kurabilirler.
+
+## Mediator Tasarım Desenini Kullanma Durumları
+
+- **Birçok Nesnenin Birbiriyle Etkileşime Girdiği Durumlar**: Örneğin, chat uygulamalarında her kullanıcının birbirleriyle iletişim kurması gerektiğinde.
+- **Karmaşıklığın Azaltılması Gereken Durumlar**: Nesneler arasındaki doğrudan bağlantıların karmaşıklığı artırdığı, değişikliklerin zorlaştığı veya bakımı zor hale getirdiği durumlar.
+- **Modüler ve Bakımı Kolay Yapılar Gerekliyse**: Mediator deseni, nesneler arasında gevşek bağımlılık sağlayarak daha modüler bir yapı sunar.
+
+## Mediator Design Pattern Çalışma Akışı
+
+1. **Merkezi Bir Arayüz Tanımlama**: `Mediator` arayüzü, diğer nesnelerin kullanabileceği bir iletişim noktası sağlar.
+2. **Concrete Mediator Sınıfını Tanımlama**: Bu sınıf, `Mediator` arayüzünü uygular ve iletişimin nasıl gerçekleşeceğini belirler.
+3. **Colleague ve Concrete Colleague Nesnelerini Tanımlama**: Bu nesneler, mediator ile iletişim kurar ve mediator üzerinden diğer nesnelerle haberleşir.
+4. **İletişimi Merkezi Bir Yerde Toplama**: Concrete Colleague nesneleri, mediator aracılığıyla iletişim kurarak diğer nesnelerle etkileşime girer.
+
+## Örnek Kullanım Senaryosu
+
+Bir uçuş rezervasyon sistemini ele alalım. Bu sistemde, uçuşlar, yolcular, oteller ve arabalar gibi birçok farklı nesne olabilir ve bu nesnelerin kendi aralarında etkileşime girmesi gerekebilir. Bu noktada mediator deseni kullanılarak, her bir nesne doğrudan diğer nesnelere bağlanmak yerine bir mediator üzerinden iletişim kurar. Böylece, sistemdeki karmaşıklık azalır ve nesnelerin birbiriyle olan bağımlılıkları minimuma iner.
+
+## Mediator Design Pattern’in Avantajları
+
+- **Modüler ve Esnek Yapı**: Yeni bir nesne eklemek veya var olan bir nesnenin davranışını değiştirmek diğer nesneleri etkilemez.
+- **Gevşek Bağlantı**: Nesneler birbirleriyle doğrudan değil, mediator aracılığıyla iletişim kurar.
+- **Bakım ve Genişletilebilirlik**: Kodun bakımını ve genişletilmesini kolaylaştırır; yeni özellikler merkezi bir noktada kontrol edilir.
+
+**Mediator Design Pattern**, karmaşık ilişkileri ve etkileşimleri düzenlemek ve daha sürdürülebilir bir mimari sağlamak için etkili bir çözümdür.
 
 
 
