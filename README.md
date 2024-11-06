@@ -1,11 +1,6 @@
-https://refactoring.guru/design-patterns
-https://www.dofactory.com/net/design-patterns 
-
-👋 **Herkese Merhaba!**
-
 🌟  **Asp.Net Core  ile Design Patterns** 🌟
 
-Bu kurs, **Asp.Net Core**’un farklı sürümlerini (3.1, 5.0, 6.0, 7.0) ve **çeşitli veri tabanlarını** (MSSQL, PostgreSQL, MongoDB) kullanarak **11 farklı tasarım desenini** pratiğe dökme fırsatı sundu. Gerçek projelerde tasarım desenlerini uygulamak, öğrenim sürecimi çok daha değerli hale getirdi. 👨‍💻🔍
+Eğitim , **Asp.Net Core**’un farklı sürümlerini (3.1, 5.0, 6.0, 7.0) ve **çeşitli veri tabanlarını** (MSSQL, PostgreSQL, MongoDB) kullanarak **11 farklı tasarım desenini** pratiğe dökme fırsatı sundu. Gerçek projelerde tasarım desenlerini uygulamak, öğrenim sürecimi çok daha değerli hale getirdi. 👨‍💻🔍
 
 📚 **Kurs İçeriği ve Tasarım Desenleri:** Dersleri günlük hayattan örneklerle zenginleştirerek işledik.
 - **Chain of Responsibility Design Pattern** 🔗: İsteklerin bir işleyici zinciri üzerinden yönlendirilmesini sağlar; her işleyici isteği işleyip işlemeyeceğine kendisi karar verir.
@@ -19,7 +14,9 @@ Bu kurs, **Asp.Net Core**’un farklı sürümlerini (3.1, 5.0, 6.0, 7.0) ve **�
 - **Iterator Design Pattern** 🔄: Koleksiyon elemanlarını gezmek için bağımsız bir yöntem sunar.
 - **Facade Design Pattern** 🧱: Karmaşık sistemlerin işlevlerini sadeleştirerek kolay bir arayüz sağlar.
 - **Decorator Design Pattern** 🖌️: Sınıflara dinamik olarak yeni işlevler ekler, mevcut sınıflara dokunmadan özellik katmayı mümkün kılar.
-- Kullanılan Kaynaklar
+
+  
+ - Kullanılan Kaynaklar
 ### -https://refactoring.guru/design-patterns
 ### -https://www.dofactory.com/net/design-patterns 
  # 1-Chain of Responsibility Design Pattern    
