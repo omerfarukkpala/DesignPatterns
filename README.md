@@ -62,11 +62,9 @@ Kullanıcı bilgisi almak, sistemin durumunu değiştirmediği için **Query** o
 -  CQRS, karmaşık veri yönetimi gereksinimlerini olan projelerde oldukça etkilidir. Ancak, bu tasarım deseni küçük projeler için gereksiz karmaşıklık yaratabileceğinden, büyük ve karmaşık projelerde tercih edilmelidir.
 ---
 
-İşte Template Method tasarım desenini açıklayan ve örnek bir kullanımını gösteren sadeleştirilmiş bir README taslağı:
-
 ---
-
 # 3- Template Method Design Pattern
+
 
 Template Method, bir algoritmanın veya sürecin genel yapısını belirleyen, ancak bazı adımların alt sınıflar tarafından özelleştirilmesine izin veren bir davranışsal tasarım desenidir. Bu desen, **abstract** bir sınıf (şablon sınıf) ve ona bağlı bir veya birden fazla **concrete** sınıf (somut sınıf) ile uygulanır.
 
