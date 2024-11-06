@@ -434,3 +434,29 @@ Bir belge yönetim sistemini düşünelim. Bu sistemde belgeler farklı veri yap
 - Sistem bakımında kolaylık sağlamak için alt sistemlerde yapılacak değişiklikler, Facade üzerinden yapılır ve kullanıcı etkilenmez.
 
 **Facade Design Pattern**, özellikle karmaşık sistemlerin yönetilmesi gereken durumlarda oldukça faydalıdır, çünkü sistemi daha modüler hale getirir ve kullanıcıların sadece belirli işlevlere erişmesini sağlar. Bu sayede sistemin bakımı, kullanımı ve genişletilmesi daha verimli olur.
+
+
+# 11 - Decorator Design Pattern
+**Decorator Design Pattern**, nesne yönelimli programlamada kullanılan bir yapısal tasarım desenidir. Bu desen, bir nesneye dinamik olarak işlevsellik eklemek veya mevcut işlevselliği değiştirmek için kullanılır, ve bunu alt sınıflar oluşturmadan gerçekleştirir. Böylece, sınıf yapısı esnek hale gelir ve mevcut sınıfların değiştirilmesi gerekmeden yeni özellikler eklenebilir.
+
+### Temel Amaçlar:
+1. **Açık Genişleme (Open for Extension)**: Mevcut sınıflar yeni işlevsellik eklemek için genişletilebilir, ancak sınıflar değiştirilmeden bu eklemeler yapılabilir.
+2. **Kapalı Değişmezlik (Closed for Modification)**: Mevcut sınıflar değiştirilemez, ancak yeni dekoratör sınıfları eklenerek işlevsellik eklenebilir.
+
+### Bileşenler:
+- **Component (Bileşen)**: Temel işlevselliği tanımlar. Diğer sınıflar bu arayüzü kullanarak işlevselliği genişletir.
+- **ConcreteComponent (Somut Bileşen)**: Component arayüzünü uygulayan ve genişletilen somut sınıftır. Bu sınıf, nesnenin temel işlevlerini içerir.
+- **Decorator (Dekoratör)**: Component arayüzünü uygulayan soyut bir sınıftır. Bu sınıf, bir nesneyi sarmalar (wrap) ve ona ek işlevsellik ekler.
+- **ConcreteDecorator (Somut Dekoratör)**: Decorator sınıfını genişleten ve ek işlevsellik sağlayan somut sınıflardır.
+
+### Kullanım Senaryoları:
+- **Dinamik Özellik Ekleme**: Bir nesnenin işlevselliği gerektiği zaman dinamik olarak eklenebilir. Örneğin, bir kullanıcıya ek özellikler sunulmak istendiğinde (örneğin, bir öğeye zenginleştirilmiş etkileşimler veya görsel stil eklemek).
+- **Karmaşık Yapılarla Çalışma**: Örneğin, dış kütüphaneleri kullanırken mevcut sınıfları değiştirmemek adına, yeni işlevsellikler eklemek için Decorator kullanılabilir.
+- **Esnek ve Modüler Tasarım**: İşlevsellik eklemek veya değiştirmek için sınıflar arasında sıkı bir ilişki oluşturulmaz, böylece sistem daha esnek ve sürdürülebilir hale gelir.
+
+### Faydaları:
+- **Sınıf Yapısını Değiştirmeden Yeni Özellikler Ekler**: Yeni sınıflar ekleyerek mevcut işlevleri değiştirmek zorunda kalmadan ek özellikler ekler.
+- **İşlevsellikleri Modülerleştirir**: Farklı işlevsellikler birbirinden bağımsız olarak eklenebilir ve gerektiğinde kombin edilebilir.
+- **Genişletilebilir**: Yeni işlevler eklemek için mevcut sınıflar değiştirilmez, yalnızca yeni dekoratörler eklenir.
+
+**Decorator Design Pattern**, özellikle yazılımın sürdürülebilirliği ve esnekliği açısından çok faydalıdır. Mevcut sınıflara alt sınıflar oluşturmadan işlevsellik eklemek isteyen geliştiriciler için güçlü bir desendir.
