@@ -18,7 +18,7 @@ Bir bankanın kredi onay sürecini simüle eden örnek senaryoda, müşterinin t
 1. **Müşteri** 1.250.000 TL kredi talep eder.
 2. **Veznedar**, limiti 50.000 TL olduğu için bu talebi işleyemez ve bir üst seviyeye, **şube müdür yardımcısına** iletir.
 3. **Şube müdür yardımcısı** 150.000 TL limiti aşan talebi işleyemez, bu nedenle talebi **şube müdürüne** iletir.
-4. **Şube müdürü**, limiti 19050.000 TL'yi aştığı için işleyemez ve talebi **bölge müdürüne** yönlendirir.
+4. **Şube müdürü**, limiti 150.000 TL'yi aştığı için işleyemez ve talebi **bölge müdürüne** yönlendirir.
 5. **Bölge müdürü**, maksimum limiti 1.600.000 TL olduğu için bu isteği onaylar ve işlem tamamlanır.
 
 Bu senaryoda her işleyici, talebi ya işleyip onaylar ya da bir üst yetkiliye iletir. Bu yapı, sistemin esnek ve genişletilebilir olmasını sağlar.
