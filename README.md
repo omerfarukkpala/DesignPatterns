@@ -1,6 +1,27 @@
 https://refactoring.guru/design-patterns
 https://www.dofactory.com/net/design-patterns 
-   
+
+👋 **Herkese Merhaba!**
+
+🌟  **Asp.Net Core  ile Design Patterns** 🌟
+
+Bu kurs, **Asp.Net Core**’un farklı sürümlerini (3.1, 5.0, 6.0, 7.0) ve **çeşitli veri tabanlarını** (MSSQL, PostgreSQL, MongoDB) kullanarak **11 farklı tasarım desenini** pratiğe dökme fırsatı sundu. Gerçek projelerde tasarım desenlerini uygulamak, öğrenim sürecimi çok daha değerli hale getirdi. 👨‍💻🔍
+
+📚 **Kurs İçeriği ve Tasarım Desenleri:** Dersleri günlük hayattan örneklerle zenginleştirerek işledik.
+- **Chain of Responsibility Design Pattern** 🔗: İsteklerin bir işleyici zinciri üzerinden yönlendirilmesini sağlar; her işleyici isteği işleyip işlemeyeceğine kendisi karar verir.
+- **CQRS (Command Query Responsibility Segregation) Design Pattern** 📈: Veri okuma ve yazma işlemlerini ayırarak performans ve ölçeklenebilirliği artırır.
+- **Template Method Design Pattern** 📝: Algoritmanın iskeletini belirlerken, bazı adımların alt sınıflar tarafından özelleştirilmesine izin verir.
+- **Observer Design Pattern** 👀: Bir nesnede değişiklik olduğunda bağlı nesnelerin otomatik güncellenmesini sağlar, nesneler arasındaki bağımlılığı azaltır.
+- **Unit of Work Design Pattern** 🛠️: Veritabanı işlemlerini bir işlemde toplar, hepsinin başarılı olması durumunda veritabanına yazar.
+- **Repository Design Pattern** 📂: Veri erişimini soyutlayarak veri ile iş mantığını birbirinden ayırır.
+- **Composite Design Pattern** 🧩: "Bütün-parça" ilişkisini yönetir ve nesneleri aynı yapıda işler.
+- **Mediator Design Pattern** 💬: Nesneler arasındaki iletişimi merkezi bir aracı üzerinden gerçekleştirir.
+- **Iterator Design Pattern** 🔄: Koleksiyon elemanlarını gezmek için bağımsız bir yöntem sunar.
+- **Facade Design Pattern** 🧱: Karmaşık sistemlerin işlevlerini sadeleştirerek kolay bir arayüz sağlar.
+- **Decorator Design Pattern** 🖌️: Sınıflara dinamik olarak yeni işlevler ekler, mevcut sınıflara dokunmadan özellik katmayı mümkün kılar.
+- Kullanılan Kaynaklar
+### -https://refactoring.guru/design-patterns
+### -https://www.dofactory.com/net/design-patterns 
  # 1-Chain of Responsibility Design Pattern    
 Chain of Responsibility (Sorumluluk Zinciri) tasarım deseni, isteklerin işleyici nesnelerden oluşan bir zincir boyunca iletilmesini sağlayan bir **davranışsal** tasarım desenidir. Bu desen, her işleyicinin isteği işleyip işleyemeyeceğine karar vermesine ve isteği gerektiğinde zincirdeki bir sonraki işleyiciye iletmesine olanak tanır. Bu yapı sayesinde, istekler bir zincir boyunca iletilir ve uygun işleyici tarafından ele alınır.
 ## Amaç    
