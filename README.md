@@ -350,6 +350,54 @@ Bir uçuş rezervasyon sistemini ele alalım. Bu sistemde, uçuşlar, yolcular, 
 
 **Mediator Design Pattern**, karmaşık ilişkileri ve etkileşimleri düzenlemek ve daha sürdürülebilir bir mimari sağlamak için etkili bir çözümdür.
 
+# 9 - Iterator Design Pattern
 
+**Iterator Design Pattern**, bir koleksiyonun elemanlarını tek tek gezmek ve bu elemanlara koleksiyonun yapısından bağımsız olarak erişmek için bir yöntem sağlar. Bu desen, dolaşımı (iterasyonu) koleksiyon yapısından ayırarak istemci kodun koleksiyonun iç yapısıyla ilgilenmesini önler ve her türlü veri yapısında (liste, yığın, ağaç vb.) aynı arabirimle dolaşım sağlar. 
+
+## Iterator Tasarım Deseni'nin Amaç ve Avantajları
+
+### 1. Dolaşımı Koleksiyondan Ayırma
+Iterator deseni, koleksiyonun elemanlarına sırayla erişim sağlamak için kullanılan işlemleri koleksiyon sınıfından ayırır. Bu, koleksiyon sınıfının dolaşım yöntemlerini barındırmak zorunda olmadan veriyi depolamaya odaklanmasını sağlar.
+
+### 2. Koleksiyon Türünden Bağımsız Dolaşım
+İstemci, koleksiyonun türünden bağımsız bir şekilde aynı arabirimle tüm elemanlara erişebilir. Böylece, koleksiyon üzerinde yapılan dolaşım işlemleri koleksiyonun iç yapısındaki değişikliklerden etkilenmez.
+
+### 3. Çoklu Dolaşım Desteği
+Iterator deseninde, aynı koleksiyon üzerinde birden fazla bağımsız dolaşım yapabilmek mümkündür. Her iterator nesnesi, mevcut pozisyon ve kalan eleman gibi dolaşımla ilgili detayları ayrı ayrı tutar.
+
+## Iterator Tasarım Deseni’nin Bileşenleri
+
+1. **Iterator Interface (Iterator Arabirimi)**: Koleksiyon üzerindeki dolaşım işlevlerini tanımlar. Örneğin, bir sonraki elemana geçme, geçerli elemana erişme, koleksiyonun sonuna gelip gelinmediğini kontrol etme gibi işlemleri içerir.
+
+2. **Concrete Iterator (Somut Iterator)**: `Iterator` arayüzünü uygular ve belirli bir koleksiyon üzerinde dolaşım işlemini gerçekleştirir. Her koleksiyon türü için özel bir `Concrete Iterator` sınıfı olabilir.
+
+3. **Collection Interface (Koleksiyon Arabirimi)**: Koleksiyonlar için ortak bir arayüzdür ve iterator nesnelerini oluşturmak için bir yöntem sağlar.
+
+4. **Concrete Collection (Somut Koleksiyon)**: Koleksiyon arayüzünü uygular ve koleksiyonun gerçek yapısını yönetir. Elemanlara erişmek için bir iterator nesnesi döndürür.
+
+## Iterator Tasarım Desenini Kullanma Durumları
+
+- **Farklı Koleksiyon Yapılarıyla Çalışma Gereksinimi**: Örneğin, bir liste, ağaç veya graf gibi veri yapılarının elemanlarını tek tip bir dolaşım yöntemiyle gezmek istendiğinde.
+- **Dolaşım Sırasının Kontrol Altında Olması Gereken Durumlar**: Bir koleksiyonun tüm elemanları üzerinden sırayla, rastgele veya özel bir sıra ile geçmek gerektiğinde.
+- **Koleksiyonun İç Yapısının Gizlenmesi İstendiğinde**: Koleksiyonların iç yapısının dış koddan gizlenmesi, istemci kodunun koleksiyonun veri depolama yöntemiyle ilgilenmeden dolaşım yapabilmesini sağlar.
+
+## Iterator Tasarım Deseni Çalışma Akışı
+
+1. **Iterator Arayüzünün Tanımlanması**: Bu arayüz, dolaşım için temel işlevleri içerir.
+2. **Somut Iterator Sınıfının Oluşturulması**: Bu sınıf, belirli bir koleksiyon için dolaşımı gerçekleştirir.
+3. **Koleksiyon Arayüzünün Tanımlanması**: Koleksiyonlar için ortak işlevler sunar ve iterator nesneleri döndürür.
+4. **Somut Koleksiyon Sınıflarının Oluşturulması**: Bu sınıflar, koleksiyon arayüzünü uygulayarak elemanları yönetir ve iterator nesneleri sağlar.
+
+## Örnek Kullanım Senaryosu
+
+Bir belge yönetim sistemini düşünelim. Bu sistemde belgeler farklı veri yapılarında (listeler, ağaçlar veya graf yapıları gibi) saklanabilir. Kullanıcının tüm belge öğelerini dolaşmak istemesi durumunda, belge koleksiyonlarının türüne göre farklı dolaşım yöntemleri gerekebilir. Iterator deseni sayesinde, kullanıcı aynı arabirimle tüm belgeleri dolaşabilir ve her belge koleksiyonu kendi iterator sınıfını kullanarak özel dolaşım mantığını uygular.
+
+## Iterator Design Pattern’in Avantajları
+
+- **Modülerlik**: Koleksiyon yapısından bağımsız dolaşım sağlar, bu da kodu daha esnek ve modüler hale getirir.
+- **Gizlilik ve Esneklik**: Koleksiyonun iç yapısı gizlendiği için, istemci koda koleksiyon türü hakkında bilgi vermeden dolaşım sağlanabilir.
+- **Bağımsız ve Esnek Dolaşım**: Aynı koleksiyon üzerinde birden fazla bağımsız iterator çalıştırılabilir ve her iterator nesnesi kendi konumunu saklar.
+
+**Iterator Design Pattern**, koleksiyonun iç yapısını istemci koddan gizleyerek dolaşımı bağımsız hale getirir ve özellikle farklı koleksiyon türleriyle çalışırken kodun temiz, sürdürülebilir ve anlaşılır olmasını sağlar.
 
 
