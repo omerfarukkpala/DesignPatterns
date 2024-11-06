@@ -28,3 +28,5 @@ Bu senaryoda her işleyici, talebi ya işleyip onaylar ya da bir üst yetkiliye 
 1. **Esneklik**: Yeni işleyiciler zincire kolayca eklenebilir veya çıkartılabilir.
 2. **Bağımlılığı Azaltır**: İstek gönderen nesne, hangi işleyicinin isteği işleyeceğini bilmek zorunda kalmaz.
 3. **Karmaşık İşlemleri Düzenler**: Çok adımlı ve hiyerarşik işlemleri yönetmek için ideal bir yapıdır.
+
+## CQRS (Command Query Responsibility Segregation) Design Pattern :
