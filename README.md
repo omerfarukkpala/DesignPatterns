@@ -61,3 +61,67 @@ Kullanıcı bilgisi almak, sistemin durumunu değiştirmediği için **Query** o
 ## Sonuç
 -  CQRS, karmaşık veri yönetimi gereksinimlerini olan projelerde oldukça etkilidir. Ancak, bu tasarım deseni küçük projeler için gereksiz karmaşıklık yaratabileceğinden, büyük ve karmaşık projelerde tercih edilmelidir.
 ---
+
+İşte Template Method tasarım desenini açıklayan ve örnek bir kullanımını gösteren sadeleştirilmiş bir README taslağı:
+
+---
+
+# 3- Template Method Design Pattern
+
+Template Method, bir algoritmanın veya sürecin genel yapısını belirleyen, ancak bazı adımların alt sınıflar tarafından özelleştirilmesine izin veren bir davranışsal tasarım desenidir. Bu desen, **abstract** bir sınıf (şablon sınıf) ve ona bağlı bir veya birden fazla **concrete** sınıf (somut sınıf) ile uygulanır.
+
+## Template Method Deseninin Temel Bileşenleri
+
+1. **Abstract Class (Şablon Sınıf)**: Sürecin genel akışını tanımlar ve sırasını belirler. Bazı adımlar abstract (soyut) metotlar olarak belirtilir, bu metotların implementasyonu alt sınıflara bırakılır.
+   
+2. **Concrete Class (Somut Sınıflar)**: Şablon sınıfta tanımlanan abstract metotları kendi ihtiyaçlarına göre özelleştirir. Böylece her alt sınıf aynı genel akışa bağlı kalırken kendine has detayları uygulayabilir.
+
+## Template Method Kullanım Senaryoları
+
+- Bir algoritmanın temel yapısı sabittir, ancak bazı adımların alt sınıflar tarafından farklı şekillerde uygulanması gerekiyorsa.
+- Kod tekrarını azaltmak ve ortak işlemleri merkezi bir sınıfta toplamak istendiğinde.
+- Belirli bir süreç için temel yapıyı koruyup, detayları alt sınıflara bırakmak isteniyorsa.
+
+## Örnek: Alışveriş Sepetinde Ödeme Süreci
+
+Bu örnekte, **alışveriş sepetindeki ürünlerin satın alma süreci** için Template Method deseni kullanacağız. Süreç her ürün için dört temel adımdan oluşur:
+
+1. **Başlangıç**: İşlemin başlatılması.
+2. **Ürün Seçimi**: Ürünün kullanıcı tarafından seçilmesi.
+3. **Ödeme**: Ödeme işleminin yapılması.
+4. **Bitiş**: İşlemin tamamlanması.
+
+Örneğimizde televizyon ve buzdolabı satın alma işlemleri aynı akışa sahip olacak; ancak her bir ürünün seçim ve ödeme adımları farklılık gösterecek.
+
+## Örnek Akış
+
+### Şablon Sınıf: `ShoppingProcess`
+
+Bu sınıf, satın alma sürecinin adımlarını ve sırasını belirler. **Ürün Seçimi** ve **Ödeme** adımları soyut olarak tanımlanır, böylece her ürün için bu adımlar alt sınıflarda özelleştirilebilir.
+
+### Alt Sınıf: `TVPurchase`
+
+Televizyon satın alma süreci, `ShoppingProcess` şablon sınıfını temel alır, ancak **Ürün Seçimi** ve **Ödeme** adımlarını televizyon için özelleştirir.
+
+### Alt Sınıf: `RefrigeratorPurchase`
+
+Buzdolabı satın alma süreci de `ShoppingProcess` şablon sınıfını temel alır ve bu adımları buzdolabı için özelleştirir.
+
+## Template Method Deseninin Avantajları
+
+- **Kod Tekrarını Azaltma**: Ortak adımlar bir yerde toplanarak kod tekrarı azaltılır.
+- **Modülerlik ve Sürdürülebilirlik**: Farklı ürünlerin kendi özel süreç adımlarını tanımlaması sağlanır, bu da her alt sınıfın yalnızca kendi özelleştirilmiş adımlarını içermesine olanak tanır.
+- **Esneklik**: Temel akış sabit kalırken, her ürün için süreç adımları farklılaştırılabilir.
+
+## Sonuç
+
+Template Method deseni, algoritmanın veya sürecin genel yapısını koruyarak, alt sınıfların yalnızca değişen veya spesifik adımları uyarlamasını sağlar. Bu desen, özellikle aynı sürecin farklı detaylar gerektirdiği durumlarda esneklik ve kod temizliği sağlar.
+
+--- 
+
+
+
+
+
+
+
