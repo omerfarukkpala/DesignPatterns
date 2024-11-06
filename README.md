@@ -59,6 +59,5 @@ Kullanıcı bilgisi almak, sistemin durumunu değiştirmediği için **Query** o
 - **Sürdürülebilirlik**: Her bir model kendi sorumluluğunu ele aldığı için daha modüler bir yapı oluşturur.
 - **Deneyim Odaklı Tasarım**: Komut ve sorgu işlemleri, bağımsız olarak en uygun araç ve tekniklerle ele alınabilir.
 ## Sonuç
-
-CQRS, karmaşık veri yönetimi gereksinimlerini olan projelerde oldukça etkilidir. Ancak, bu tasarım deseni küçük projeler için gereksiz karmaşıklık yaratabileceğinden, büyük ve karmaşık projelerde tercih edilmelidir.
+-  CQRS, karmaşık veri yönetimi gereksinimlerini olan projelerde oldukça etkilidir. Ancak, bu tasarım deseni küçük projeler için gereksiz karmaşıklık yaratabileceğinden, büyük ve karmaşık projelerde tercih edilmelidir.
 ---
