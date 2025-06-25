@@ -16,7 +16,7 @@ Eğitim , **Asp.Net Core**’un farklı sürümlerini (3.1, 5.0, 6.0, 7.0) ve **
 - **Decorator Design Pattern** 🖌️: Sınıflara dinamik olarak yeni işlevler ekler, mevcut sınıflara dokunmadan özellik katmayı mümkün kılar.
 
    
- ### - Kullanılan Kaynaklar
+ ### - Kullanılan Kaynaklar 
 #### -https://refactoring.guru/design-patterns
 #### -https://www.dofactory.com/net/design-patterns 
  # 1-Chain of Responsibility Design Pattern    
