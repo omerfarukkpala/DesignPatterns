@@ -13,7 +13,7 @@ Eğitim , **Asp.Net Core**’un farklı sürümlerini (3.1, 5.0, 6.0, 7.0) ve **
 - **Mediator Design Pattern** 💬: Nesneler arasındaki iletişimi merkezi bir aracı üzerinden gerçekleştirir.
 - **Iterator Design Pattern** 🔄: Koleksiyon elemanlarını gezmek için bağımsız bir yöntem sunar.
 - **Facade Design Pattern** 🧱: Karmaşık sistemlerin işlevlerini sadeleştirerek kolay bir arayüz sağlar.
-- **Decorator Design Pattern** 🖌️: Sınıflara dinamik olarak yeni işlevler ekler, mevcut sınıflara dokunmadan özellik katmayı mümkün kılar.
+- **Decorator Design Pattern** 🖌️: Sınıflara dinamik olarak yeni işlevler ekler, mevcut sınıflara dokunmadan özellik katmayı mümkün kılar. 
 
    
  ### - Kullanılan Kaynaklar 
