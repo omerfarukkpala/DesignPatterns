@@ -1,5 +1,5 @@
 🌟  **Asp.Net Core  ile Design Patterns** 🌟            
-     
+      
 Eğitim , **Asp.Net Core**’un farklı sürümlerini (3.1, 5.0, 6.0, 7.0) ve **çeşitli veri tabanlarını** (MSSQL, PostgreSQL, MongoDB) kullanarak **11 farklı tasarım desenini** pratiğe dökme fırsatı sundu. Gerçek projelerde tasarım desenlerini uygulamak, öğrenim sürecimi çok daha değerli hale getirdi. 👨‍💻🔍        
       
 📚 **Kurs İçeriği ve Tasarım Desenleri:** Dersleri günlük hayattan örneklerle zenginleştirerek işledik.  
